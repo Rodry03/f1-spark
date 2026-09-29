@@ -3,6 +3,7 @@
 FROM quay.io/jupyter/pyspark-notebook:2026-09-29
 
 # FastF1 para descargar datos de F1; pyarrow para escribir Parquet desde pandas.
-RUN pip install --no-cache-dir fastf1 pyarrow
+COPY requirements.txt /tmp/requirements.txt
+RUN pip install --no-cache-dir -r /tmp/requirements.txt
 
 WORKDIR /home/jovyan/work
