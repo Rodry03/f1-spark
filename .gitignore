@@ -1,0 +1,10 @@
+# Datos descargados y caché de FastF1
+data/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+.venv/

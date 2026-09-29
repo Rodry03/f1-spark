@@ -1,0 +1,12 @@
+services:
+  jupyter:
+    build: .
+    image: f1-spark:latest
+    container_name: f1-spark
+    ports:
+      - "8888:8888"   # JupyterLab
+      - "4040:4040"   # Spark UI (disponible mientras haya una SparkSession activa)
+    volumes:
+      - ./data:/home/jovyan/work/data
+      - ./notebooks:/home/jovyan/work/notebooks
+      - ./src:/home/jovyan/work/src
